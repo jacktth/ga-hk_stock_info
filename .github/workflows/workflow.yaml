@@ -23,7 +23,7 @@ jobs:
 
       - name: check directory
         run: |
-          mkdir -p $GITHUB_WORKSPACE/stock_info
+          mkdir -p stock_info
           pwd
           ls
         
@@ -34,8 +34,12 @@ jobs:
       - name: Run script
         working-directory: ./src
         run: |
+          pwd
+          ls
           node main.js
-          cat $GITHUB_WORKSPACE/stock_info/date.json
+          cat ../stock_info/date.json
+          pwd
+          ls
 
 
 
