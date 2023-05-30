@@ -16,11 +16,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd..
-          pwd
-          ls
+
           npm install -g pnpm
           pnpm install
+          cd ..
+                    
+          pwd
+          ls
 
 
       - name: check directory
