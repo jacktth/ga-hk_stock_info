@@ -24,9 +24,10 @@ jobs:
         run: |
           pwd
           ls
-        working-directory: ./src
+        
 
       - name: Compile TypeScript
+        working-directory: ./src
         run: tsc main.ts
 
       - name: Run script
