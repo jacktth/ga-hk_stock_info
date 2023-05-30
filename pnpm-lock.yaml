@@ -7,14 +7,14 @@ dependencies:
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@20.2.5)(typescript@5.0.4)
+  typescript:
+    specifier: ^5.0.4
+    version: 5.0.4
   xlsx:
     specifier: ^0.18.5
     version: 0.18.5
 
 devDependencies:
-  typescript:
-    specifier: ^5.0.2
-    version: 5.0.4
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@20.2.5)
