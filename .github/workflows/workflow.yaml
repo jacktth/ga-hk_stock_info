@@ -1,6 +1,10 @@
 name: fetch hk stock info
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
@@ -32,5 +36,3 @@ jobs:
           git add .
           git diff --quiet || git commit -m "Build commit $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
           git push
-
-          
