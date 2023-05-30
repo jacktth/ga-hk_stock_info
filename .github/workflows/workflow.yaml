@@ -31,6 +31,7 @@ jobs:
         run: tsc main.ts
 
       - name: Run script
+        working-directory: ./src
         run: node main.js
 
       - name: commit-new-files
