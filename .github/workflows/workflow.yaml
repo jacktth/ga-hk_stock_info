@@ -38,7 +38,8 @@ jobs:
         run: mkdir -p $GITHUB_WORKSPACE/stock_info
 
       - name: Display JSON file contents
-        run: cat stock_info/data.json
+        working-directory: ./stock_info
+        run: cat data.json
 
       - name: commit-new-files
         run: |
