@@ -35,8 +35,7 @@ const fetching = fetch(hkListingURL).then((data) => {
 
 return arrayBuffer
 });
-console.log("-----------", fetching.then(data=>console.log(data)
-));
+
 
 
 // A Promise that resolves with  data
@@ -46,5 +45,5 @@ const dataPromise = Promise.resolve(fetching);
 dataPromise.then(data => {
   fs.writeFile('../data.json', JSON.stringify(data));
 }).catch(err => {
-  console.error(err);
+  console.error("err",err);
 });

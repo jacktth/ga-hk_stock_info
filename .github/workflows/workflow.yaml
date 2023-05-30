@@ -1,10 +1,6 @@
 name: fetch hk stock info
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
@@ -24,10 +20,10 @@ jobs:
           pnpm install
 
       - name: Compile TypeScript
-        run: pnpm run build
+        run: cd src | tsc main.ts
 
       - name: Run script
-        run: node main.js
+        run: cd.. | node main.js
 
       - name: commit-new-files
         run: |

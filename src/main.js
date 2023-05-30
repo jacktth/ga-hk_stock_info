@@ -31,12 +31,11 @@ var fetching = fetch(hkListingURL).then(function (data) {
     });
     return arrayBuffer;
 });
-console.log("-----------", fetching.then(function (data) { return console.log(data); }));
 // A Promise that resolves with  data
 var dataPromise = Promise.resolve(fetching);
 // Wait for the Promise to resolve and store the data in a JSON file
 dataPromise.then(function (data) {
     fs.writeFile('../data.json', JSON.stringify(data));
 }).catch(function (err) {
-    console.error(err);
+    console.error("err", err);
 });
