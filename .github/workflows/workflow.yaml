@@ -16,6 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pwd
           ls
           npm install -g pnpm
           pnpm install
