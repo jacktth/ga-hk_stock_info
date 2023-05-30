@@ -35,7 +35,7 @@ var fetching = fetch(hkListingURL).then(function (data) {
 var dataPromise = Promise.resolve(fetching);
 // Wait for the Promise to resolve and store the data in a JSON file
 dataPromise.then(function (data) {
-    fs.writeFile('date.json', JSON.stringify(data));
+    fs.writeFile('data.json', JSON.stringify(data));
 }).catch(function (err) {
     console.error("err", err);
 });
