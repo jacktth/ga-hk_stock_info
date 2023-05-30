@@ -20,28 +20,32 @@ jobs:
           npm install -g pnpm
           pnpm install
 
+      - name: make-all-directory
+        run: 
+
       - name: check directory
         run: |
+          mkdir -p $GITHUB_WORKSPACE/stock_info
           pwd
           ls
         
-
       - name: Compile TypeScript
         working-directory: ./src
         run: tsc main.ts
 
       - name: Run script
         working-directory: ./src
-        run: node main.js
-
-      - name: make-all-directory
-        run: mkdir -p $GITHUB_WORKSPACE/stock_info
-
-      - name: Display JSON file contents
-        working-directory: ./stock_info
         run: |
-          pwd
-          cat data.json
+          node main.js
+          cat $GITHUB_WORKSPACE/stock_info/date.json
+
+
+
+      # - name: Display JSON file contents
+      #   working-directory: $GITHUB_WORKSPACE/stock_info
+      #   run: |
+      #     pwd
+
 
       - name: commit-new-files
         run: |
