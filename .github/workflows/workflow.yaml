@@ -25,12 +25,12 @@ jobs:
           pwd
           ls
         
-      - name: Compile TypeScript
-        working-directory: ./src
-        run: tsc main.ts
+      # - name: Compile TypeScript
+      #   working-directory: ./src
+      #   run: tsc main.ts
 
       - name: Run script
-        working-directory: ./src
+        working-directory: ./stock_info
         run: node main.js
 
       - name: make-all-directory
