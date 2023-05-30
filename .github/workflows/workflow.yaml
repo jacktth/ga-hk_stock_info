@@ -23,7 +23,7 @@ jobs:
         run: cd src | tsc main.ts
 
       - name: Run script
-        run: cd.. | node main.js
+        run: node main.js
 
       - name: commit-new-files
         run: |
