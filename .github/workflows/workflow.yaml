@@ -33,7 +33,7 @@ jobs:
       - name: Run script
         working-directory: ./src
         run: node main.js
-
+  
       - name: make-all-directory
         run: mkdir -p $GITHUB_WORKSPACE/stock_info
 
