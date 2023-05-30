@@ -25,6 +25,7 @@ jobs:
         run: |
           cd src
           pwd
+          ls
 
       - name: Compile TypeScript
         run: tsc main.ts
