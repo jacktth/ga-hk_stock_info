@@ -19,6 +19,9 @@ jobs:
           npm install -g pnpm
           pnpm install
 
+      - name: Print current working directory
+        run: pwd
+        
       - name: Compile TypeScript
         run: cd src | tsc main.ts
 
