@@ -34,6 +34,9 @@ jobs:
         working-directory: ./src
         run: node main.js
 
+      - name: Display JSON file contents
+        run: cat stock_info/data.json
+
       - name: commit-new-files
         run: |
           git config user.name github-actions
