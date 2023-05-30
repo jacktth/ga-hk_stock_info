@@ -16,18 +16,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-
+          ls
           npm install -g pnpm
           pnpm install
-          cd ..
-                    
-          pwd
-          ls
-
 
       - name: check directory
         run: |
-          mkdir -p stock_info
           pwd
           ls
         
@@ -37,26 +31,19 @@ jobs:
 
       - name: Run script
         working-directory: ./src
-        run: |
-          pwd
-          ls
-          node main.js
-          cat ../stock_info/date.json
-          pwd
-          ls
+        run: node main.js
 
+      - name: make-all-directory
+        run: mkdir -p $GITHUB_WORKSPACE/stock_info
 
-
-      # - name: Display JSON file contents
-      #   working-directory: $GITHUB_WORKSPACE/stock_info
-      #   run: |
-      #     pwd
-
+      - name: Display JSON file contents
+        working-directory: ./stock_info
+        run: cat data.json
 
       - name: commit-new-files
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git diff --quiet || git commit -m "Build commit $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-          git push
+          git commit -m "Build commit $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          git push origin main
