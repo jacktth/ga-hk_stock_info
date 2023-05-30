@@ -23,6 +23,7 @@ jobs:
 
       - name: check directory
         run: |
+          working-directory: ./src
           pwd
           ls
 
