@@ -38,7 +38,6 @@ jobs:
         run: mkdir -p $GITHUB_WORKSPACE/stock_info
 
       - name: Display JSON file contents
-        run: 
         working-directory: ./stock_info
         run: |
           pwd
