@@ -20,8 +20,6 @@ jobs:
           npm install -g pnpm
           pnpm install
 
-      - name: make-all-directory
-        run: 
 
       - name: check directory
         run: |
