@@ -22,9 +22,9 @@ jobs:
 
       - name: check directory
         run: |
-          working-directory: ./src
           pwd
           ls
+        working-directory: ./src
 
       - name: Compile TypeScript
         run: tsc main.ts
