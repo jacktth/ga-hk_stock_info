@@ -18,16 +18,13 @@ jobs:
         run: |
           npm install -g pnpm
           pnpm install
+          cd src
 
 
       - name: check directory
-        run: ls
-
-      - name: Print current working directory
-        run: cd.. | pwd |ls
-
-      - name: enter src
-        run: cd src | pwd
+        run: |
+          cd src
+          pwd
 
       - name: Compile TypeScript
         run: tsc main.ts
