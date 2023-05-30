@@ -21,9 +21,12 @@ jobs:
 
       - name: Print current working directory
         run: pwd
-        
+
+      - name: enter src
+        run: cd src | pwd
+
       - name: Compile TypeScript
-        run: cd src | tsc main.ts
+        run: tsc main.ts
 
       - name: Run script
         run: node main.js
