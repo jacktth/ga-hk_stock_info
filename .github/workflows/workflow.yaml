@@ -19,8 +19,12 @@ jobs:
           npm install -g pnpm
           pnpm install
 
+
+      - name: check directory
+        run: ls
+
       - name: Print current working directory
-        run: pwd
+        run: cd.. | pwd |ls
 
       - name: enter src
         run: cd src | pwd
