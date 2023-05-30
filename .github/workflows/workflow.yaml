@@ -19,7 +19,6 @@ jobs:
           ls
           npm install -g pnpm
           pnpm install
-          cd /src
 
       - name: check directory
         run: |
