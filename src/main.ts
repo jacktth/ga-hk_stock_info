@@ -43,7 +43,7 @@ const dataPromise = Promise.resolve(fetching);
 
 // Wait for the Promise to resolve and store the data in a JSON file
 dataPromise.then(data => {
-  fs.writeFile('../data.json', JSON.stringify(data));
+  fs.writeFile('data.json', JSON.stringify(data));
 }).catch(err => {
   console.error("err",err);
 });
