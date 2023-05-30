@@ -33,14 +33,16 @@ jobs:
       - name: Run script
         working-directory: ./src
         run: node main.js
-  
+
       - name: make-all-directory
         run: mkdir -p $GITHUB_WORKSPACE/stock_info
 
       - name: Display JSON file contents
-        run: pwd
+        run: 
         working-directory: ./stock_info
-        run: cat data.json
+        run: |
+          pwd
+          cat data.json
 
       - name: commit-new-files
         run: |
