@@ -30,15 +30,15 @@ jobs:
       #   run: tsc main.ts
 
       - name: Run script
-        working-directory: ./stock_info
+        working-directory: stock_info
         run: node main.js
 
-      - name: make-all-directory
-        run: mkdir -p $GITHUB_WORKSPACE/stock_info
+      # - name: make-all-directory
+      #   run: mkdir -p $GITHUB_WORKSPACE/stock_info
 
-      - name: Display JSON file contents
-        working-directory: ./stock_info
-        run: cat data.json
+      # - name: Display JSON file contents
+      #   working-directory: ./stock_info
+      #   run: cat data.json
 
       - name: commit-new-files
         run: |
