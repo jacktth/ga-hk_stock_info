@@ -26,6 +26,7 @@ const fetching = fetch(hkListingURL).then((data) => {
       symbol: ws[`A${n}`]["v"],
       engName: ws[`B${n}`]["v"],
       zhName: ws[`C${n}`]["v"],
+      url: ws[`D${n}`]["v"],
 
     });
 

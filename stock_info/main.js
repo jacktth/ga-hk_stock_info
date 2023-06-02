@@ -24,6 +24,7 @@ var fetching = fetch(hkListingURL).then(function (data) {
                 symbol: ws["A".concat(n)]["v"],
                 engName: ws["B".concat(n)]["v"],
                 zhName: ws["C".concat(n)]["v"],
+                url: ws["D".concat(n)]["v"],
             });
             n++;
         }
