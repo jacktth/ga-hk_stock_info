@@ -12,7 +12,10 @@ dist
 dist-ssr
 *.local
 src
-tsconfig.jsonpnpm-lock-lock.yaml
+tsconfig.json
+pnpm-lock-lock.yaml
+.gitignore
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
