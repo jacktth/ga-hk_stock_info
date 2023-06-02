@@ -37,12 +37,13 @@ jobs:
         working-directory: stock_info
         run: node main.js
 
-      # - name: make-all-directory
-      #   run: mkdir -p $GITHUB_WORKSPACE/stock_info
-
-      # - name: Display JSON file contents
-      #   working-directory: ./stock_info
-      #   run: cat data.json
+     - name: Check for changes
+        run: |
+          if git diff-index --quiet HEAD; then
+            echo "nothing changes everything updated"
+          else
+            echo "There are changes to commit"
+          fi
 
       - name: commit-new-files
         run: |
