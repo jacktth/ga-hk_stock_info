@@ -11,10 +11,12 @@ Here is an example of a json response from the API:
 
   "symbol": "0001.HK",
  
-  "engName":"CK Hutchison Holdings Limited"
+  "engName":"CK Hutchison Holdings Limited",
   
-  "zhName":"長江和記實業有限公司"
+  "zhName":"長江和記實業有限公司",
   
+  "url": "http://www.ckh.com.hk"
+
 }
 
 
