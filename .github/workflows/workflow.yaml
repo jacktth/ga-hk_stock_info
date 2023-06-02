@@ -30,7 +30,7 @@ jobs:
 
       - name: Check for changes
         run: |
-          if git diff-index --quiet HEAD; then'
+          if git diff-index --quiet HEAD; then
             echo "nothing changes everything updated"
           else
             echo "There are changes to commit"
