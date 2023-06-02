@@ -24,15 +24,6 @@ jobs:
           npm install -g pnpm
           pnpm install
 
-      - name: check directory
-        run: |
-          pwd
-          ls
-        
-      # - name: Compile TypeScript
-      #   working-directory: ./src
-      #   run: tsc main.ts
-
       - name: Run script
         working-directory: stock_info
         run: node main.js
