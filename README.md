@@ -2,7 +2,7 @@ HK Stock Listing API
 
 This API provides information on Hong Kong Stock Exchange listings in JSON format.
 
-https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/stock_info/data.json
+[https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/stock_info/data.json](https://github.com/jacktth/ga-hk_stock_info/blob/main/hk-listings/date.json)
 
 
 Here is an example of a json response from the API:
