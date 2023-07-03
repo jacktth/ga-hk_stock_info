@@ -25,7 +25,7 @@ jobs:
           pnpm install
 
       - name: Run script
-        working-directory: stock_info
+        working-directory: hk-listings
         run: node main.js
 
       - name: commit-new-files
