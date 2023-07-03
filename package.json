@@ -9,11 +9,11 @@
     "start": "ts-node src/main.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.3.3",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
   },
   "dependencies": {
-    "@types/node": "^20.2.5",
     "ts-node": "^10.9.1",
     "xlsx": "^0.18.5"
   }
