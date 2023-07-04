@@ -19,5 +19,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "stock_info/main.ts", "stock_info/main.ts"]
+  "include": [ "stock_info/main.ts"],
+
 }
