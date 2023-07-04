@@ -22,15 +22,29 @@ jobs:
         run: |
           ls
           npm install
-          
 
       - name: Run script
         working-directory: hk-listings
         run: node main.js
 
+      - name: Wait for 5 seconds
+        run: sleep 5s
+
+      - name: Do something else
+        run: echo "waited for 5 seconds"
+
       - name: Run script
         working-directory: shanghai-connect
         run: node main.js
+
+      - name: Do something else
+        run: echo "waited for 5 seconds"
+
+      - name: Wait for 5 seconds
+        run: sleep 5s
+
+      - name: Do something else
+        run: echo "waited for 5 seconds"
 
       - name: Run script
         working-directory: shenzhen-connect
