@@ -41,7 +41,12 @@ dataPromise
         setTimeout(function () {
             var secondPromise = Promise.resolve(fetching);
             secondPromise.then(function (data) {
-                fs.writeFile("date.json", JSON.stringify(data));
+                if (data.length === 0) {
+                    return;
+                }
+                else {
+                    fs.writeFile("date.json", JSON.stringify(data));
+                }
             });
         }, 5000);
     }
