@@ -1,22 +1,9 @@
 HK Stock Listing API
 
-This API provides information on Hong Kong Stock Exchange listings in JSON format.
+This project provides information on Hong Kong Stock Exchange listings in JSON format.
 
-[https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/stock_info/data.json](https://github.com/jacktth/ga-hk_stock_info/blob/main/hk-listings/date.json)
+HK-listings: [https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/stock_info/data.json](https://github.com/jacktth/ga-hk_stock_info/blob/main/hk-listings/date.json)
 
+Shenzhen-Connect: [https://github.com/jacktth/ga-hk_stock_info/raw/main/shenzhen-connect/date.json](https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/shenzhen-connect/date.json)
 
-Here is an example of a json response from the API:
-
-{
-
-  "symbol": "0001.HK",
- 
-  "engName":"CK Hutchison Holdings Limited",
-  
-  "zhName":"長江和記實業有限公司",
-  
-  "url": "http://www.ckh.com.hk"
-
-}
-
-
+ShangHai-Connect: [https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/shanghai-connect/date.json](https://raw.githubusercontent.com/jacktth/ga-hk_stock_info/main/shanghai-connect/date.json)
