@@ -80,8 +80,20 @@ var fetching = fetch(szConnectListingEng).then(function (data) {
 // A Promise that resolves with  data
 var dataPromise = Promise.resolve(fetching);
 // Wait for the Promise to resolve and store the data in a JSON file
-dataPromise.then(function (data) {
-    fs.writeFile('date.json', JSON.stringify(data));
-}).catch(function (err) {
+dataPromise
+    .then(function (data) {
+    if (data.length === 0) {
+        setTimeout(function () {
+            var secondPromise = Promise.resolve(fetching);
+            secondPromise.then(function (data) {
+                fs.writeFile("date.json", JSON.stringify(data));
+            });
+        }, 5000);
+    }
+    else {
+        fs.writeFile("date.json", JSON.stringify(data));
+    }
+})
+    .catch(function (err) {
     console.error("err", err);
 });

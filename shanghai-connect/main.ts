@@ -90,8 +90,19 @@ const fetching = fetch(shConnectListingEng).then((data) => {
 const dataPromise = Promise.resolve(fetching);
 
 // Wait for the Promise to resolve and store the data in a JSON file
-dataPromise.then(data => {
-  fs.writeFile('date.json', JSON.stringify(data));
-}).catch(err => {
-  console.error("err",err);
-});
+dataPromise
+  .then((data) => {
+    if (data.length === 0) {
+      setTimeout(() => {
+        const secondPromise = Promise.resolve(fetching);
+        secondPromise.then((data) => {
+          fs.writeFile("date.json", JSON.stringify(data));
+        });
+      }, 5000);
+    } else {
+      fs.writeFile("date.json", JSON.stringify(data));
+    }
+  })
+  .catch((err) => {
+    console.error("err", err);
+  });
